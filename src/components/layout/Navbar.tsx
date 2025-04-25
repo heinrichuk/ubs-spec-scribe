@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   return (
     <header className="bg-white text-ubs-red border-b border-ubs-gray/20">
       <div className="ubs-container py-3 flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 pl-2">  {/* Reduced space-x from space-x-4 to space-x-2, added pl-2 to push further left */}
           <Button 
             variant="ghost" 
             size="icon" 
@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             <img 
               src="/lovable-uploads/cb3632ee-2e4c-4059-905c-bc1a642aba3b.png" 
               alt="UBS Logo" 
-              className="h-20 w-auto"  // Doubled the logo size from h-10 to h-20
+              className="h-20 w-auto"  // ... keep existing logo size
             />
             <span className="text-xl font-semibold tracking-tight">GIC Recruitment Tool</span>
           </Link>
