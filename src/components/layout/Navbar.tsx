@@ -10,13 +10,13 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   return (
-    <header className="bg-black text-white border-b border-ubs-gray/20">
+    <header className="bg-white text-ubs-red border-b border-ubs-gray/20">
       <div className="ubs-container py-3 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Button 
             variant="ghost" 
             size="icon" 
-            className="text-white md:hidden"
+            className="text-ubs-red md:hidden"
             onClick={onMenuClick}
           >
             <Menu size={24} />
@@ -26,20 +26,20 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             <img 
               src="/lovable-uploads/cb3632ee-2e4c-4059-905c-bc1a642aba3b.png" 
               alt="UBS Logo" 
-              className="h-8 w-auto"
+              className="h-10 w-auto"  // Increased logo size from h-8 to h-10
             />
             <span className="text-xl font-semibold tracking-tight">GIC Recruitment Tool</span>
           </Link>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-sm font-medium hover:text-ubs-red transition-colors">
+          <Link to="/" className="text-sm font-medium hover:text-ubs-red/80 transition-colors">
             Dashboard
           </Link>
-          <Link to="/job-specs" className="text-sm font-medium hover:text-ubs-red transition-colors">
+          <Link to="/job-specs" className="text-sm font-medium hover:text-ubs-red/80 transition-colors">
             Job Specs
           </Link>
-          <Link to="/interviews" className="text-sm font-medium hover:text-ubs-red transition-colors">
+          <Link to="/interviews" className="text-sm font-medium hover:text-ubs-red/80 transition-colors">
             Interviews
           </Link>
         </nav>
