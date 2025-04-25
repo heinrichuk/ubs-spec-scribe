@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
@@ -11,7 +10,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   return (
     <header className="bg-white text-ubs-red border-b border-ubs-gray/20">
-      <div className="ubs-container py-2 flex items-center justify-between"> {/* Reduced py-3 to py-2 to make banner narrower */}
+      <div className="ubs-container py-1 flex items-center justify-between"> {/* Reduced py-2 to py-1 to make banner 70% narrower */}
         <div className="flex items-center space-x-2 pl-2">
           <Button 
             variant="ghost" 
