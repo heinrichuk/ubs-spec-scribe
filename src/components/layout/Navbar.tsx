@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             <img 
               src="/lovable-uploads/cb3632ee-2e4c-4059-905c-bc1a642aba3b.png" 
               alt="UBS Logo" 
-              className="h-10 w-auto"  // Increased logo size from h-8 to h-10
+              className="h-20 w-auto"  // Doubled the logo size from h-10 to h-20
             />
             <span className="text-xl font-semibold tracking-tight">GIC Recruitment Tool</span>
           </Link>
