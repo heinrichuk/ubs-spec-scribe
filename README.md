@@ -1,73 +1,100 @@
-# Welcome to your Lovable project
 
-## Project info
+# UBS Spec Scribe
 
-**URL**: https://lovable.dev/projects/a1456920-58a4-4260-bb0d-e2888a42e365
+A UBS-styled job specification generator and interview question tool built with React and FastAPI.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Generate job specifications from templates
+- Customize job specs with your requirements
+- Upload existing job specifications (PDF, DOCX)
+- Upload CVs/Resumes for analysis
+- Generate tailored interview questions based on job specs and CVs
+- UBS-inspired design and user interface
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a1456920-58a4-4260-bb0d-e2888a42e365) and start prompting.
+### Frontend
+- React with TypeScript
+- Tailwind CSS for styling
+- shadcn/ui component library
+- React Router for navigation
+- Tanstack Query for data management
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
+- FastAPI Python framework
+- Azure OpenAI integration for AI features
+- File processing capabilities
 
-**Use your preferred IDE**
+## Setup and Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
+- Node.js (v16+)
+- Python (v3.9+)
+- Docker and Docker Compose (optional, for containerized deployment)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Environment Variables
+Create a `.env` file in the root directory with these variables:
 
-Follow these steps:
+```
+AZURE_OPENAI_ENDPOINT=your_azure_openai_endpoint
+AZURE_OPENAI_API_KEY=your_azure_openai_api_key
+AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment_name
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Running Locally
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+#### Frontend
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The frontend will be available at http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### Backend
 
-**Use GitHub Codespaces**
+```bash
+# Navigate to backend directory
+cd backend
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Create and activate virtual environment (optional)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-## What technologies are used for this project?
+# Install dependencies
+pip install -r requirements.txt
 
-This project is built with:
+# Start the server
+uvicorn main:app --reload
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The API will be available at http://localhost:8000
 
-## How can I deploy this project?
+### Docker Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/a1456920-58a4-4260-bb0d-e2888a42e365) and click on Share -> Publish.
+To deploy the entire application using Docker:
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+docker-compose up -d
+```
 
-Yes, you can!
+The frontend will be available at http://localhost:3000 and the backend at http://localhost:8000
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## API Endpoints
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- `GET /`: Welcome message and API status
+- `POST /api/generate-job-spec`: Generate job specification from template
+- `POST /api/upload-job-spec`: Upload and process job specification document
+- `POST /api/generate-interview-questions`: Generate interview questions
+- `POST /api/upload-cv`: Upload and process CV/Resume
+
+## Frontend Routes
+
+- `/`: Home/Dashboard
+- `/job-specs`: Job Specification generator
+- `/interviews`: Interview question generator
