@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -11,7 +10,7 @@ const Index: React.FC = () => {
     <Layout>
       <section className="mb-10">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">UBS Spec Scribe</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">GIC Recruitment Tool</h1>
           <p className="text-lg text-ubs-gray max-w-3xl mx-auto">
             Generate professional job specifications and interview questions with AI-powered tools, inspired by UBS excellence.
           </p>
@@ -51,10 +50,10 @@ const Index: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button asChild className="bg-ubs-darkBlue hover:bg-opacity-90 text-white">
+            <Button asChild className="bg-ubs-red hover:bg-opacity-90 text-white">
               <Link to="/job-specs">Create Job Spec</Link>
             </Button>
-            <Button asChild variant="outline" className="border-ubs-darkBlue text-ubs-darkBlue hover:bg-ubs-darkBlue/10">
+            <Button asChild variant="outline" className="border-ubs-red text-ubs-red hover:bg-ubs-red/10">
               <Link to="/interviews">Generate Questions</Link>
             </Button>
           </div>
