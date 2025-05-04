@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: './src/main.tsx',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
     publicPath: '/'
   },
@@ -62,7 +62,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './public/index.html',
       favicon: './public/favicon.ico'
     }),
     new CopyWebpackPlugin({
@@ -71,7 +71,7 @@ module.exports = {
           from: 'public',
           to: '',
           globOptions: {
-            ignore: ['**/favicon.ico'],
+            ignore: ['**/favicon.ico', '**/index.html'],
           },
         },
       ],
