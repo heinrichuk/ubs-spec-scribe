@@ -3,10 +3,7 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    './src/**/*.{ts,tsx}',
   ],
   prefix: "",
   theme: {
@@ -24,6 +21,14 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ubs: {
+          red: "#EC0016",
+          darkBlue: "#0F2C4D",
+          lightBlue: "#3E75BB",
+          gray: "#71757A",
+          lightGray: "#F5F5F5",
+          accent: "#0F2C4D"
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -52,10 +57,6 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "ubs-red": "#EC0016",
-        "ubs-darkBlue": "#0A1744",
-        "ubs-gray": "#71767C",
-        "ubs-lightGray": "#F7F7F7",
       },
       borderRadius: {
         lg: "var(--radius)",
